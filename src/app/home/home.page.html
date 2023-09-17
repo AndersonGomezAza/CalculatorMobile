@@ -1,20 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="display">{{display}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><button (click)="operation('sen')">SEN</button></ion-col>
+        <ion-col size="3"><button (click)="operation('cos')">COS</button></ion-col>
+        <ion-col size="3"><button (click)="operation('tan')">TAN</button></ion-col>
+        <ion-col size="3"><button (click)="operation('pow')">x<sup>y</sup></button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3" (click)="reset()"><button>AC</button></ion-col>
+        <ion-col size="3"><button (click)="operation('sqrt')">√</button></ion-col>
+        <ion-col size="3"><button (click)="operation('%')">%</button></ion-col>
+        <ion-col size="3"><button (click)="operation('/')">/</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3" ><button (click)="numbers(7)">7</button></ion-col>
+        <ion-col size="3" ><button (click)="numbers(8)">8</button></ion-col>
+        <ion-col size="3" ><button (click)="numbers(9)">9</button></ion-col>
+        <ion-col size="3"><button  (click)="operation('x')">X</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><button (click)="numbers(4)">4</button></ion-col>
+        <ion-col size="3"><button (click)="numbers(5)">5</button></ion-col>
+        <ion-col size="3"><button (click)="numbers(6)">6</button></ion-col>
+        <ion-col size="3"><button (click)="operation('-')">-</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><button (click)="numbers(1)">1</button></ion-col>
+        <ion-col size="3"><button (click)="numbers(2)">2</button></ion-col>
+        <ion-col size="3"><button (click)="numbers(3)">3</button></ion-col>
+        <ion-col size="3"><button (click)="operation('+')">+</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><button (click)="numbers(0)">0</button></ion-col>
+        <ion-col size="3"><button (click)="numbers('.')">.</button></ion-col>
+        <ion-col size="6" (click)="equal()"><button>=</button></ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
